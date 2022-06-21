@@ -2,6 +2,7 @@ package codewars
 
 import (
 	"strings"
+	"unicode"
 )
 
 /*
@@ -96,4 +97,34 @@ func Accum(s string) string {
 		}
 	}
 	return res
+}
+
+// clever solution from another users, notice the strings methods
+func AccumAlt(s string) string {
+	parts := make([]string, len(s))
+	for i := 0; i < len(s); i++ {
+		parts[i] = strings.ToUpper(string(s[i])) + strings.Repeat(strings.ToLower(string(s[i])), i)
+	}
+	return strings.Join(parts, "-")
+}
+
+// accepts a string, and returns the same string with all even indexed characters in each word upper cased,
+// and all odd indexed characters in each word lower cased.
+func ToWeirdCase(str string) string {
+	r := []rune(str)
+	index := 0
+	for i, v := range r {
+		if v == ' ' {
+			index = 0
+			continue
+		}
+		if index%2 == 0 {
+			r[i] = unicode.ToUpper(r[i])
+			index++
+			continue
+		}
+		r[i] = unicode.ToLower(r[i])
+		index++
+	}
+	return string(r)
 }

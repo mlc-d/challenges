@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	input := "RqaEzty"
-	fmt.Println(codewars.Accum(input))
+	input := "Weird string case"
+	fmt.Println(codewars.ToWeirdCase(input))
 }
