@@ -1,7 +1,6 @@
 package codewars
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 	"unicode"
@@ -185,14 +184,12 @@ func PickPeaks(input []int) PosPeaks {
 	}
 
 	for i := 1; i < length-1; i++ {
-		fmt.Println("testing:", input[i])
 		if input[i] > input[i-1] && input[i] > input[i+1] {
 			pos = append(pos, i)
 			peaks = append(peaks, input[i])
 		}
 		if input[i] > input[i-1] && input[i] == input[i+1] {
 			for j := i + 1; j < length; j++ {
-				fmt.Println("testing j:", input[j])
 				if input[j] > input[i] {
 					break
 				}
