@@ -2,26 +2,6 @@ package hackerrank
 
 import "testing"
 
-func Test_flip(t *testing.T) {
-	type args struct {
-		arr []int32
-	}
-	tests := []struct {
-		name string
-		args args
-	}{
-		{
-			name: "test",
-			args: args{arr: []int32{45, 67, 89, 2}},
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			flip(tt.args.arr)
-		})
-	}
-}
-
 func Test_greatestNumber(t *testing.T) {
 	type args struct {
 		args []int32
@@ -37,26 +17,6 @@ func Test_greatestNumber(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := greatestNumber(tt.args.args...); got != tt.want {
 				t.Errorf("greatestNumber() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
-func Test_resolveCorners(t *testing.T) {
-	type args struct {
-		matrix [][]int32
-	}
-	tests := []struct {
-		name string
-		args args
-		want int32
-	}{
-		// TODO: Add test cases.
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := resolveCorners(tt.args.matrix); got != tt.want {
-				t.Errorf("resolveCorners() = %v, want %v", got, tt.want)
 			}
 		})
 	}
