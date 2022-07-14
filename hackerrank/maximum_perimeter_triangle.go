@@ -1,7 +1,9 @@
 package hackerrank
 
+import "retos/utils"
+
 func maximumPerimeterTriangle(sticks []int32) []int32 {
-	RadixSort(sticks)
+	utils.RadixSort(sticks)
 
 	l := len(sticks)
 

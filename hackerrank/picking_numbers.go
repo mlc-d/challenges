@@ -1,7 +1,9 @@
 package hackerrank
 
+import "retos/utils"
+
 func pickingNumbers(a []int32) int32 {
-	RadixSort(a)
+	utils.RadixSort(a)
 	var res, max int32
 
 	for i := 0; i < len(a)-1; i++ {
