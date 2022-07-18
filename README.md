@@ -1,4 +1,4 @@
-### Challenges
+## Challenges
 
 Solutions for programming challenges from various websites:
 
