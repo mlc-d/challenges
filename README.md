@@ -1,6 +1,6 @@
 ## Challenges
 
-Solutions for programming challenges from various sources:
+Solutions for programming challenges from various websites:
 
 - [Codewars.](https://www.codewars.com/users/mlc-d)
 - [Project Euler](https://projecteuler.net)
